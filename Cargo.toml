@@ -1,0 +1,16 @@
+[package]
+name = "virtual_clock"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.dev.package.'*']
+opt-level = 3
+
+[dependencies]
+macroquad = "0.3.9" # https://crates.io/crates/macroquad
+
+
+# cargo build --target wasm32-unknown-unknown --release
+# basic-http-server .
