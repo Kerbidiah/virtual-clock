@@ -126,7 +126,9 @@ pub struct Clock {
 
 impl Clock {
 	pub fn draw(&self) {
+		draw_circle_lines(screen_width() / 2.0, screen_height() / 2.0, draw_clock::MINUTE_HAND_LENGTH, 5.0, WHITE);
 		draw_clock::draw_minute_hand(self.minute_hand.angle);
 		draw_clock::draw_hour_hand(self.hour_hand.angle);
+		draw_circle(screen_width() / 2.0, screen_height() / 2.0, 6.0, WHITE);
 	}
 }
